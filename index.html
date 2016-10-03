@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CRM</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<h1>CRM</h1>
+	<div class="interface">
+		<ul class="tabs">
+			<li><a href="#" class="tabs_link leads_li" id="leads_link">Leads</a></li>
+			<li><a href="#" class="tabs_link" id="calls_link">Calls</a></li>
+			<li><a href="#" class="tabs_link" id="appointments_link">Appointments</a></li>
+			<li><a href="#" class="tabs_link" id="accounts_link">Accounts</a></li>
+		</ul>
+
+		<section class="tabs_content leads" id="leads">
+			<h2>Add Lead</h2>
+			<!-- add form -->
+			<form action="" class="new_lead">
+				<input type="text" name="name" placeholder="Add Name" class="lead_name">
+				<input type="tel" name="number" placeholder="(124) 456-7891" class="lead_number">
+				<input type="submit" name="add" value="Add" class="add_lead">
+			</form>
+			
+			<h2>Current Leads</h2>
+			<!-- display table -->
+			<div class="table lead_table">
+				<div class="row head">
+					<div class="cell">Client Name</div>
+					<div class="cell">Number</div>
+					<div class="cell">Convert to Account</div>
+					<div class="cell">Remove</div>
+				</div>
+				<div class="row lead_initial_row">
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="tabs_content calls" id="calls">
+			<h2>Calls</h2>
+
+			<form action="" class="new_call">
+				<input type="text" name="name" placeholder="Add Name" class="call_name" >
+				<input type="tel" name="number" placeholder="(124) 456-7891" class="call_number">
+				<select name="outcome" class="call_outcome" placeholder="Otcome">
+				  <option value="outcome" class="outcome" selected>Outcome</option>
+				  <option value="interested">Interested</option>
+				  <option value="uninterested">Uninterested</option>
+				  <option value="sold">Sold</option>
+				  <option value="no answer">No Answer</option>
+				</select>
+				<input type="submit" name="add" value="Add" class="add_call">
+			</form>
+
+			<h2>Call Log</h2>
+			<!-- display table -->
+			<div class="table call_table">
+				<div class="row head">
+					<div class="cell">Client Name</div>
+					<div class="cell">Number</div>
+					<div class="cell">Outcome</div>
+					<div class="cell">Remove</div>
+				</div>
+				<div class="row call_initial_row">
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+			</div>
+		</section> <!-- End Calls -->
+
+
+
+		<section class="tabs_content appointments" id="appointments">
+			<h2>Appointments</h2>
+			<form action="" class="new_appointment">
+				<input type="text" name="name" placeholder="Client Name" class="client_name" >
+				<input type="date" name="date" placeholder="DD/MM/YY" class="appointment_date">
+				<input type="time" name="time" placeholder="HH:MM" class="appointment_time">
+				<input type="submit" name="add" value="Add" class="add_appointment">
+			</form>
+			<h2>Call Log</h2>
+			<!-- display table -->
+			<div class="table appointment_table">
+				<div class="row head">
+					<div class="cell">Client Name</div>
+					<div class="cell">Date</div>
+					<div class="cell">Time</div>
+					<div class="cell">Remove</div>
+				</div>
+				<div class="row appointment_initial_row">
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="tabs_content accounts" id="accounts">
+			<h2>Add Accounts</h2>
+			<!-- Add Account -->
+			<form action="" class="new_account">
+				<input type="text" name="name" placeholder="Add Name" class="account_name">
+				<input type="tel" name="number" placeholder="(124) 456-7891" class="account_number">
+				<input type="submit" name="add" value="Add" class="add_account">
+			</form>
+			<h2>Active Accounts</h2>
+			<!-- display table -->
+			<div class="table account_table">
+				<div class="row head">
+					<div class="cell">Account Name</div>
+					<div class="cell">Number</div>
+					<div class="cell">Remove</div>
+				</div>
+				<div class="row account_initial_row">
+					<div class="cell"></div>
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+			</div>
+		</section> <!-- End Appointments -->
+	</div> <!-- /.interface -->
+</div> <!-- /.wrapper -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
